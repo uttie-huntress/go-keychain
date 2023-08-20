@@ -1,9 +1,10 @@
-module github.com/keybase/go-keychain
+module github.com/uttie-huntress/go-keychain
 
 go 1.19
 
 require (
 	github.com/keybase/dbus v0.0.0-20220506165403-5aa21ea2c23a
+	github.com/keybase/go-keychain v0.0.0-20230523030712-b5615109f100
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.8.0
 	golang.org/x/crypto v0.1.0
