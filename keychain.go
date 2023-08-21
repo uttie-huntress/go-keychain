@@ -67,6 +67,8 @@ var (
 	ErrorInvalidOwnerEdit = Error(C.errSecInvalidOwnerEdit)
 	// ErrorUserCanceled corresponds to errSecUserCanceled result code
 	ErrorUserCanceled = Error(C.errSecUserCanceled)
+	// ErrorSecWrPerm corresponds to errSecWrPerm result code
+	ErrorSecWrPerm = Error(C.errSecWrPerm)
 )
 
 func checkError(errCode C.OSStatus) error {
@@ -124,6 +126,8 @@ func (k Error) Error() (msg string) {
 		msg = "An invalid attempt to change the owner of an item."
 	case ErrorUserCanceled:
 		msg = "User canceled the operation."
+	case ErrorSecWrPerm:
+		msg = "Write permissions error"
 	default:
 		msg = "Keychain Error."
 	}
